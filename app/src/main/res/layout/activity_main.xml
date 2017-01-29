@@ -35,4 +35,29 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:text="@string/play_"
+        android:layout_height="wrap_content"
+        android:id="@+id/playText"
+        android:textSize="30sp"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:fontFamily="sans-serif"
+        android:textColor="?android:attr/textColorHint"
+        android:textStyle="normal|bold"
+        android:layout_width="150dp" />
+
+    <TextView
+        android:text="@string/matches"
+        android:layout_height="wrap_content"
+        android:id="@+id/matches"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/playText"
+        android:layout_toEndOf="@+id/playText" />
+
 </RelativeLayout>

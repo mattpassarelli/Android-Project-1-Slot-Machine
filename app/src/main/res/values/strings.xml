@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Project 1 Slot Machine</string>
+    <string name="matches">Match 0: Lose $1 Match 2: Win $2 Match 3: Win $3</string>
+    <string name="play_">$1 To Play</string>
+
 </resources>
