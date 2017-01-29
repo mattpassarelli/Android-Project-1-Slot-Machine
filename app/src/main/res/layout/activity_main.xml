@@ -22,14 +22,14 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/dol"
-        android:id="@+id/dol"
+        android:id="@+id/imageView"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView" />
 
     <Button
-        android:layout_width="110dp"
-        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:id="@+id/go"
         android:background="@drawable/go"
         android:layout_centerVertical="true"
@@ -43,7 +43,6 @@
         android:layout_below="@+id/textView"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView"
-        android:fontFamily="sans-serif"
         android:textColor="?android:attr/textColorHint"
         android:textStyle="normal|bold"
         android:layout_width="150dp" />
@@ -53,11 +52,51 @@
         android:layout_height="wrap_content"
         android:id="@+id/matches"
         android:textSize="20sp"
-        android:layout_width="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_width="160dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/reset1"
+        android:id="@+id/reset"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/playText"
-        android:layout_toEndOf="@+id/playText" />
+        android:clickable="true"
+        tools:clickable="true"
+        android:background="@drawable/reset1"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/f1"
+        android:id="@+id/flower1"
+        android:layout_alignTop="@+id/flower2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/f1"
+        android:id="@+id/flower2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/matches"
+        android:layout_alignLeft="@+id/go"
+        android:layout_alignStart="@+id/go" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/f1"
+        android:id="@+id/flower3"
+        android:layout_alignTop="@+id/flower2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>
