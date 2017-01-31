@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
+    <ImageView
         android:id="@+id/Dollar"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -27,27 +27,17 @@
         android:background="@drawable/dol"
         app:srcCompat="@drawable/dol" />
 
-    <Button
+    <ImageView
         android:id="@+id/go"
         android:layout_width="100dp"
         android:layout_height="90dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/go" />
+        android:background="@drawable/go"
+        android:clickable="true"
+        tools:clickable="true" />
 
-    <TextView
-        android:id="@+id/playText"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:text="@string/play_"
-        android:textColor="?android:attr/textColorHint"
-        android:textSize="30sp"
-        android:textStyle="normal|bold" />
-
-    <Button
+    <ImageView
         android:id="@+id/reset"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -61,6 +51,7 @@
         tools:clickable="true" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -90,32 +81,58 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/flower3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/flower2"
+        app:srcCompat="@drawable/f1" />
+
+    <ImageView
+        android:id="@+id/flower1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/flower2"
+        app:srcCompat="@drawable/f1" />
+
+    <TextView
+        android:id="@+id/playText"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/go"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/play_"
+        android:textColor="?android:attr/textColorHint"
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
+
+    <ImageView
+        android:id="@+id/flower2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@+id/linearLayout2"
         android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal">
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/f1" />
 
-        <ImageView
-            android:id="@+id/flower1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/f1" />
-
-        <ImageView
-            android:id="@+id/flower2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/f1" />
-
-        <ImageView
-            android:id="@+id/flower3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/f1" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/Moneycount"
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/flower1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/flower1"
+        android:layout_marginBottom="14dp"
+        android:text="@string/money"
+        android:textSize="26sp"
+        android:typeface="monospace"
+        android:layout_height="30dp"
+        android:textColor="@color/Money" />
 
 
 </RelativeLayout>

@@ -4,5 +4,6 @@
     <string name="match2">Match 2: Win $2 </string>
     <string name="match3">Match 3: Win $3 </string>
     <string name="play_">$1 To Play</string>
+    <string name="money">$5</string>
 
 </resources>
