@@ -17,6 +17,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity implements Animation.AnimationListener {
 
     private ImageView reset;
+    private ImageView go;
     private ImageView flower1;
     private ImageView flower2;
     private ImageView flower3;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
 
         reset = (ImageView) findViewById(R.id.reset);
+        go = (ImageView) findViewById(R.id.go);
         flower1 = (ImageView) findViewById(R.id.flower1);
         flower2 = (ImageView) findViewById(R.id.flower2);
         flower3 = (ImageView) findViewById(R.id.flower3);
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
     }
 
     public void go(View view) {
+
         flower1.setBackgroundResource(R.drawable.tmp);
         flower2.setBackgroundResource(R.drawable.tmp);
         flower3.setBackgroundResource(R.drawable.tmp);
@@ -58,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
         amount -= 1;
         setMoney(amount);
+
+        go.setClickable(false);
     }
 
 
@@ -72,20 +77,24 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
         amount = 5;
         setMoney(amount);
+
+
         flower1.setBackgroundResource(R.drawable.f1);
         flower2.setBackgroundResource(R.drawable.f1);
         flower3.setBackgroundResource(R.drawable.f1);
 
+        go.setVisibility(View.VISIBLE);
         reset.setVisibility(View.GONE);
     }
 
     @Override
     public void onAnimationStart(Animation animation) {
-
+        go.setClickable(false);
     }
 
     @Override
     public void onAnimationEnd(Animation animation) {
+        go.setClickable(true);
         changeFlowers();
     }
 
@@ -133,25 +142,21 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
                 break;
         }
 
-        if(num1 == num2)
-        {
+        if (num1 == num2) {
             count = 2;
-        }
-        else if(num2 == num3)
-        {
+        } else if (num2 == num3) {
             count = 2;
-        }
-        else if(num1 == num3)
-        {
+        } else if (num1 == num3) {
             count = 2;
-        }
-        else if(num1 == num2 && num2 == num3)
-        {
+        } else if (num1 == num2 && num2 == num3) {
             count = 3;
         }
 
-       // Toast.makeText(this, ""+ count, Toast.LENGTH_LONG).show();
+        // Toast.makeText(this, ""+ count, Toast.LENGTH_LONG).show();
         amount += count;
+        if (amount <= 0) {
+            go.setVisibility(View.GONE);
+        }
         setMoney(amount);
     }
 
