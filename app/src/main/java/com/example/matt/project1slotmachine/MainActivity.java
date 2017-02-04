@@ -144,12 +144,13 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
 
         if (num1 == num2) {
             count = 2;
+            if (num2 == num3) {
+                count = 3;
+            }
         } else if (num2 == num3) {
             count = 2;
         } else if (num1 == num3) {
             count = 2;
-        } else if (num1 == num2 && num2 == num3) {
-            count = 3;
         }
 
         // Toast.makeText(this, ""+ count, Toast.LENGTH_LONG).show();
